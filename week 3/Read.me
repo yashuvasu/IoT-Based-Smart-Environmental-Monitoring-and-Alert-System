@@ -1,0 +1,9 @@
+Smart Environmental Monitor: Week 3 (Debugging and Optimization)
+
+Week 2 gave me firmware that passed its own tests. This week I tried to break it. Valgrind found a display bug that my sanitizers missed, a clock-rollover test showed the device would fall back into warm-up after 49.7 days, and a 7-day random fault-injection run exposed a 1 ms lag in fault handling. I fixed all five defects and added regression tests. To check the tests themselves, I injected 16 deliberate bugs. At first six slipped through, so I strengthened the tests until every one was caught.
+
+I also profiled the code and rewrote the scheduler. In the simulation, the firmware now runs about half the instructions, with 78% less display traffic and identical alert behaviour.
+
+All results come from a PC simulation. Hardware testing is Week 4.
+
+Pilla Yashwanth | Yuva Intern
