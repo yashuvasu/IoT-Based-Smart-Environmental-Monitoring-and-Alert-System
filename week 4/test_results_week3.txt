@@ -1,0 +1,109 @@
+Smart Environmental Monitor v3.0.0-sim : self-test suite (simulated hardware)
+==============================================================
+T01  Start-up sequence, safe outputs, warm-up
+      -> PASS
+T02  Normal operation and OLED content
+      -> PASS
+T03  Temperature alert and response time
+      measured alert latency (simulated time): 3000 ms
+      -> PASS
+T04  Hysteresis (no chatter near threshold)
+      -> PASS
+T05  Isolated over-limit sample ignored
+      -> PASS
+T06  Humidity and low-temperature alerts
+      -> PASS
+T07  Air-quality alert, recovery
+      air-quality alert delay incl. 8-sample averaging: 8000 ms
+      -> PASS
+T08  Warm-up suppresses air-quality alert
+      -> PASS
+T09  DHT22 disconnected, recovery
+      -> PASS
+T10  MQ-135 disconnected, recovery
+      -> PASS
+T11  OLED absent at start, later recovery
+      -> PASS
+T12  Wi-Fi unavailable, back-off, reconnect
+      gaps between connection attempts: 10000, 15000, 25000 ms
+      -> PASS
+T13  Wi-Fi drops during operation
+      -> PASS
+T14  Telemetry interval and payload
+      last payload: {"device_id":"env-node-01","seq":4,"uptime_s":75,"temp_c":25.0,"hum_pct":50.0,"aq_raw":798,"aq_status":"GOOD","alert_flags":0,"fault_flags":0,"wifi_rssi_dbm":-61}
+      -> PASS
+T15  Transmission failure handling
+      -> PASS
+T16  UART commands and ring buffer
+      -> PASS
+T17  Watchdog feeding and lock-up reset
+      -> PASS
+T18  Power interruption (brown-out) restart
+      -> PASS
+T19  Spike and out-of-range data handling
+      -> PASS
+T20  Display bus traffic (per-line writes)
+      I2C bytes in 30 s with constant data: 768
+      I2C bytes after a temperature change: 128
+      -> PASS
+T21  Clock rollover: state and air alert
+      -> PASS
+T22  Clock rollover: periodic task timing
+      -> PASS
+T23  Threshold change keeps an active alert
+      -> PASS
+T24  OLED removed during operation
+      -> PASS
+T25  UART: remaining commands and limits
+      -> PASS
+T26  Frame content is deterministic
+      -> PASS
+T27  Timer ISR touches only the tick
+      -> PASS
+T28  Scheduler accuracy (no drift)
+      -> PASS
+T29  UART fuzzing (100000 bytes)
+      -> PASS
+T30  Worst-case telemetry length
+      worst-case telemetry message: 188 of 256 bytes
+      -> PASS
+T31  Randomised soak, fault injection
+      2 simulated hours with random faults: 0 invariant violations, 133 telemetry messages
+      -> PASS
+T32  Alert cleared when its sensor fails
+      -> PASS
+==============================================================
+T01  Start-up sequence, safe outputs, warm-up       PASS
+T02  Normal operation and OLED content              PASS
+T03  Temperature alert and response time            PASS
+T04  Hysteresis (no chatter near threshold)         PASS
+T05  Isolated over-limit sample ignored             PASS
+T06  Humidity and low-temperature alerts            PASS
+T07  Air-quality alert, recovery                    PASS
+T08  Warm-up suppresses air-quality alert           PASS
+T09  DHT22 disconnected, recovery                   PASS
+T10  MQ-135 disconnected, recovery                  PASS
+T11  OLED absent at start, later recovery           PASS
+T12  Wi-Fi unavailable, back-off, reconnect         PASS
+T13  Wi-Fi drops during operation                   PASS
+T14  Telemetry interval and payload                 PASS
+T15  Transmission failure handling                  PASS
+T16  UART commands and ring buffer                  PASS
+T17  Watchdog feeding and lock-up reset             PASS
+T18  Power interruption (brown-out) restart         PASS
+T19  Spike and out-of-range data handling           PASS
+T20  Display bus traffic (per-line writes)          PASS
+T21  Clock rollover: state and air alert            PASS
+T22  Clock rollover: periodic task timing           PASS
+T23  Threshold change keeps an active alert         PASS
+T24  OLED removed during operation                  PASS
+T25  UART: remaining commands and limits            PASS
+T26  Frame content is deterministic                 PASS
+T27  Timer ISR touches only the tick                PASS
+T28  Scheduler accuracy (no drift)                  PASS
+T29  UART fuzzing (100000 bytes)                    PASS
+T30  Worst-case telemetry length                    PASS
+T31  Randomised soak, fault injection               PASS
+T32  Alert cleared when its sensor fails            PASS
+--------------------------------------------------------------
+Tests passed: 32/32   Checks executed: 163   Checks failed: 0
