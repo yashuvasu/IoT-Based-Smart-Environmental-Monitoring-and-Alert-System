@@ -1,0 +1,49 @@
+STEP 01  Power on: safe outputs, initialisation, warm-up starts         [t=0 s]
+STEP 02  Warm-up, then normal operation, display and Wi-Fi              [t=5 s]
+STEP 03  Periodic telemetry                                             [t=13 s]
+STEP 04  Sensor glitches: one over-limit sample and one implausible spike [t=48 s]
+STEP 05  Temperature alert (36 C), hysteresis, clear                    [t=78 s]
+STEP 06  Humidity alert and clear                                       [t=113 s]
+STEP 07  DHT22 unplugged during an alert, then reconnected              [t=131 s]
+STEP 08  Wi-Fi lost during an alert, then restored                      [t=184 s]
+STEP 09  OLED removed and restored                                      [t=231 s]
+STEP 10  MQ-135 stuck, recovery, poor air alert                         [t=319 s]
+STEP 11  UART interface: STATUS, SET, MUTE                              [t=380 s]
+STEP 12  Transmission failure and recovery                              [t=397 s]
+STEP 13  Power interruption during an alert                             [t=452 s]
+STEP 14  Firmware lock-up recovered by the watchdog                     [t=484 s]
+
+REQUIREMENT COMPLIANCE (system-level acceptance run)
+FR-01    PASS  (2/2 checks)
+FR-02    PASS  (1/1 checks)
+FR-03    PASS  (1/1 checks)
+FR-04    PASS  (2/2 checks)
+FR-05    PASS  (1/1 checks)
+FR-06    PASS  (2/2 checks)
+FR-07    PASS  (2/2 checks)
+FR-08    PASS  (1/1 checks)
+FR-09    PASS  (1/1 checks)
+FR-10    PASS  (3/3 checks)
+FR-11    PASS  (4/4 checks)
+FR-12    PASS  (2/2 checks)
+FR-13    PASS  (2/2 checks)
+FR-14    PASS  (3/3 checks)
+FR-15    PASS  (1/1 checks)
+FR-16    PASS  (1/1 checks)
+FR-17    PASS  (2/2 checks)
+FR-18    PASS  (1/1 checks)
+FR-19    PASS  (1/1 checks)
+FR-20    PASS  (1/1 checks)
+FR-21    PASS  (2/2 checks)
+FR-22    PASS  (1/1 checks)
+FR-23    PASS  (1/1 checks)
+FR-24    PASS  (2/2 checks)
+FR-25    PASS  (1/1 checks)
+FR-26    PASS  (2/2 checks)
+NFR-01   PASS  (5/5 checks)
+NFR-02   PASS  (1/1 checks)
+NFR-04   PASS  (1/1 checks)
+NFR-05   PASS  (1/1 checks)
+NFR-07   PASS  (1/1 checks)
+
+Requirements exercised: 31   failed: 0   simulated time: 514 s

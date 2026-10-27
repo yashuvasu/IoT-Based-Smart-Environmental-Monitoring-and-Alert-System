@@ -1,0 +1,13 @@
+Soak test: 720 simulated hours, seed 20261014, 12847 random events, 223 injected resets
+  telemetry messages: 44879, watchdog resets: 0
+  I1 outputs OFF when idle                 violations: 0
+  I2 alert => LED on                       violations: 0
+  I3 alert => state ALERT                  violations: 0
+  I4 no temp/hum alert during DHT fault    violations: 0
+  I5 no AIR alert during MQ fault          violations: 0
+  I6 ring buffer indices in range          violations: 0
+  I7 OLED lines terminated                 violations: 0
+  I8 NORMAL => no alerts                   violations: 0
+  I9 threshold ordering                    violations: 0
+  I10 payload within buffer                violations: 0
+  I11 sequence numbers increase            violations: 0
